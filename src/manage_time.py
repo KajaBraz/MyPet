@@ -1,5 +1,5 @@
-from activities_defined import copy_attributes
-from attributes_coeficients import bond_decrement, food_decrement, energy_decrement, hygiene_decrement, \
+from src.activities_defined import copy_attributes
+from src.attributes_coeficients import bond_decrement, food_decrement, energy_decrement, hygiene_decrement, \
     happiness_decrement, poo_increment
 
 

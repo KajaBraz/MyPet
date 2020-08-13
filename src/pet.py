@@ -1,4 +1,4 @@
-from attributes_coeficients import min_level, max_level
+from src.attributes_coeficients import min_level, max_level
 
 
 class PetAttributes:

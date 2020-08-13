@@ -1,6 +1,6 @@
-from pet import PetAttributes
-from activities import activities
-from manage_time import step
+from src.pet import PetAttributes
+from src.activities import activities
+from src.manage_time import step
 from time import time
 
 

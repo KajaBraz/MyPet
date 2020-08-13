@@ -1,6 +1,6 @@
-from pet import PetAttributes
-from attributes_coeficients import bond_decrement, food_decrement, energy_decrement, hygiene_decrement, \
-    happiness_decrement, poo_decrement, bond_increment, food_increment, energy_increment, hygiene_increment, \
+from src.pet import PetAttributes
+from src.attributes_coeficients import food_decrement, energy_decrement, hygiene_decrement, \
+    poo_decrement, bond_increment, food_increment, energy_increment, hygiene_increment, \
     happiness_increment, poo_increment
 
 
