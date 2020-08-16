@@ -1,4 +1,4 @@
-from src.activities_defined import copy_attributes
+from src.activities_defined import copy_attributes, sleep, feed, play, teach_tricks, walk, wash
 from src.attributes_coeficients import bond_decrement, food_decrement, energy_decrement, hygiene_decrement, \
     happiness_decrement, poo_increment
 
@@ -15,3 +15,7 @@ def step(pet, delta=1):
     updated_pet.happiness += happiness_decrement * delta * time_cons
     updated_pet.poo += poo_increment * delta * time_cons
     return updated_pet
+
+
+def stop_action(pet, action, delta):
+    action(pet, delta)
