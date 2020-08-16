@@ -30,7 +30,8 @@ def prototype_game():
                 pieseczek = activities[state](pieseczek, input_time - last_update)
                 state = 'stand-by'
                 last_update = time()
-            if state != action:
+            elif state != action:
+                print(f'Your dog is in {state} mode', "\n")
                 pieseczek = activities[state](pieseczek, input_time - last_update)
                 state = action
                 print(f'Your dog is in {state} mode', "\n")

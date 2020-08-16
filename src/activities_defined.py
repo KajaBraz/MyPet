@@ -1,7 +1,7 @@
 from src.pet import PetAttributes
-from src.attributes_coeficients import food_decrement, energy_decrement, hygiene_decrement, \
-    poo_decrement, bond_increment, food_increment, energy_increment, hygiene_increment, \
-    happiness_increment, poo_increment
+from src.attributes_coeficients import food_decrement, energy_decrement, hygiene_decrement, happiness_decrement, \
+    poo_decrement, bond_increment, food_increment, energy_increment, hygiene_increment, happiness_increment, \
+    poo_increment
 
 time_cons = 0.01
 
@@ -16,6 +16,7 @@ def sleep(pet, delta=1):
     updated_pet.energy += energy_increment * delta * time_cons
     updated_pet.food += food_decrement * delta * time_cons
     updated_pet.hygiene += hygiene_decrement * delta * time_cons
+    updated_pet.poo += poo_increment * delta * time_cons
     return updated_pet
 
 
@@ -23,6 +24,7 @@ def feed(pet, delta=1):
     updated_pet = copy_attributes(pet)
     updated_pet.bond += bond_increment * delta * time_cons
     updated_pet.food += food_increment * delta * time_cons
+    updated_pet.energy += energy_decrement * delta * time_cons
     updated_pet.poo += poo_increment * delta * time_cons
     return updated_pet
 
@@ -30,7 +32,9 @@ def feed(pet, delta=1):
 def play(pet, delta=1):
     updated_pet = copy_attributes(pet)
     updated_pet.bond += bond_increment * delta * time_cons
+    updated_pet.food += food_decrement * delta * time_cons
     updated_pet.energy += energy_decrement * delta * time_cons
+    updated_pet.hygiene += hygiene_decrement * delta * time_cons
     updated_pet.happiness += happiness_increment * delta * time_cons
     return updated_pet
 
@@ -38,7 +42,9 @@ def play(pet, delta=1):
 def teach_tricks(pet, delta=1):
     updated_pet = copy_attributes(pet)
     updated_pet.bond += bond_increment * delta * time_cons
+    updated_pet.food += food_decrement * delta * time_cons
     updated_pet.energy += energy_decrement * delta * time_cons
+    updated_pet.hygiene += hygiene_decrement * delta * time_cons
     updated_pet.happiness += happiness_increment * delta * time_cons
     return updated_pet
 
@@ -46,15 +52,20 @@ def teach_tricks(pet, delta=1):
 def walk(pet, delta=1):
     updated_pet = copy_attributes(pet)
     updated_pet.bond += bond_increment * delta * time_cons
+    updated_pet.food += food_decrement * delta * time_cons
     updated_pet.energy += energy_decrement * delta * time_cons
-    updated_pet.happiness += poo_decrement * delta * time_cons
+    updated_pet.hygiene += hygiene_decrement * delta * time_cons
+    updated_pet.happiness += happiness_increment * delta * time_cons
+    updated_pet.poo += poo_decrement * delta * time_cons
     return updated_pet
 
 
 def wash(pet, delta=1):
     updated_pet = copy_attributes(pet)
     updated_pet.bond += bond_increment * delta * time_cons
+    updated_pet.energy += energy_decrement * delta * time_cons
     updated_pet.hygiene += hygiene_increment * delta * time_cons
+    updated_pet.happiness += happiness_decrement * delta * time_cons
     return updated_pet
 
 
@@ -67,4 +78,9 @@ def dream(pet):
 
 
 def get_ill(pet):
+    pass
+
+
+def leave_pet_alone(pet):
+    """You had to go out and left your pet alone at home. The bond between you and your pet has dropped."""
     pass
