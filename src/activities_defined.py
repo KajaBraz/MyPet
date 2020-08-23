@@ -36,6 +36,7 @@ def play(pet, delta=1):
     updated_pet.energy += energy_decrement * delta * time_cons
     updated_pet.hygiene += hygiene_decrement * delta * time_cons
     updated_pet.happiness += happiness_increment * delta * time_cons
+    updated_pet.poo += poo_increment * delta * time_cons
     return updated_pet
 
 
@@ -46,6 +47,7 @@ def teach_tricks(pet, delta=1):
     updated_pet.energy += energy_decrement * delta * time_cons
     updated_pet.hygiene += hygiene_decrement * delta * time_cons
     updated_pet.happiness += happiness_increment * delta * time_cons
+    updated_pet.poo += poo_increment * delta * time_cons
     return updated_pet
 
 
