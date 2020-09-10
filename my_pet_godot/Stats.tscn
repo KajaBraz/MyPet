@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Stats.py" type="Script" id=1]
+
+[node name="Stat" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -8, -8 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 64, 448, 64, 448, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D2" type="Polygon2D" parent="Node2D"]
+position = Vector2( -8, -8 )
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( 8, 8, 8, 56, 440, 56, 440, 8 )
+__meta__ = {
+"_edit_group_": true
+}
